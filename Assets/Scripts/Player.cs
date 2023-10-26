@@ -120,6 +120,8 @@ public class Player : MonoBehaviour
             isAlive = false;
             myAnimator.SetTrigger("Dying");
             myRigidbody.velocity = deadKick;
+            // xử lý playerLives
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 
